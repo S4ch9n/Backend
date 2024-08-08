@@ -14,3 +14,4 @@ const DB_URL = process.env.DB_URL.replace(
 const DB = mongoose.connect(DB_URL).then(() => {
     console.log("Connected to DB❤");
 });
+
