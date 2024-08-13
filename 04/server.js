@@ -1,15 +1,22 @@
 const  express = require('express');
 //importing the express module with require function
 const app = express()
-const db = require('./db')
+
+
 //db is representing here mongoDB connection
+const db = require('./db')
+
+//importing dotenv file
+require('dotenv').config();
+
+
+const PORT = process.env.PORT || 3000;
 
 //bodyParser.json() parse the JSON data from the request body and converts into JS object , which is then stored in the req.body
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 
-PORT = 3000;
 
 app.get('/',(req,res)=>{
     res.send("Welcome to our hotel")
