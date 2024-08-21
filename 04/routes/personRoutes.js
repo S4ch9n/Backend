@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
     //save the newPerson to the database
     const respone = await newPerson.save();
     console.log("data saved");
-    res.status(500).json(respone);
+    res.status(201).json(respone);
   } catch (error) {
     console.log(error);
     res.status(500).json({
